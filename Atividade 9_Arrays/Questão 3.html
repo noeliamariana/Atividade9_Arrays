@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3 - Arrays</title>
+    <script>
+/*3. Drofo e Topper estão em uma aventura mágica. 
+Faça um programa que contenha um inventário para cada um dos dois aventureiros - esse inventário será um array.
+Drofo terá um anel da invisibilidade, dois pares de botas mágicas, uma poção do sono e duas poções da inocência em seu inventário e nessa ordem. 
+
+Torper terá uma capa da invisibilidade, uma pedra do despertar,  uma varinha das varinhas, 
+uma poção da inocência e duas poções da mentira, poção anti-inteligência e nessa ordem. 
+
+No meio de sua jornada, 
+Torper consumiu uma das poções da mentira, perdeu sua pedra e ganhou um par de botas mágicas do Drofo,
+ achou um escudo mágico e uma espada mágica. 
+Descreva cada uma das ações acima. utilizando código (utilize comentários para ficar mais claro). 
+
+No meio da sua jornada, Drofo, 
+ganhou mais uma bota mágica, usou sua poção do sono e consumiu a poção anti-inteligência do Torper,
+encontrou um ovo de dragão e uma coxinha.
+Descreva cada uma das ações acima. utilizando código.
+
+Exiba o resultado final de cada um dos inventários utilizando "document.write"*/
+
+        var inventarioDrofo = ["anel da invisibilidade"," par de botas mágicas 1", "par de botas mágicas 2","uma poção de sono","poção da inocência 1 ", "poção da inocência 2"];
+        
+        var inventarioTorper = ["capa da invisibilidade", "uma pedra do despertar","uma varinha das varinhas", "uma poção da inocência",
+        "poção da mentira1 ","poção da mentira 2","poção anti-inteligência"];
+
+        //Torper consumiu uma das poções da mentira
+        inventarioTorper.splice(4,1);
+        //Torper perdeu sua pedra 
+        inventarioTorper.splice(1,1);
+        //Torper ganhou um par de botas mágicas do Drofo
+        inventarioTorper.push(" um par de botas mágicas 1");
+        inventarioDrofo.splice(1,1);
+
+        //Torper achou um escudo mágico e uma espada mágica
+        inventarioTorper.push("um escudo mágico"),
+        inventarioTorper.push("uma espada mágica");
+
+
+        //Drofo ganhou mais uma bota mágica
+        inventarioDrofo.push("uma bota mágica");//  verrrrrrrr
+
+        //Drofo usou sua poção do sono
+        inventarioDrofo.splice(2,1);
+        
+        //Drofo consumiu a poção anti-inteligência do Torper
+        inventarioTorper.splice(4,1);
+        //encontrou um ovo de dragão e uma coxinha
+        inventarioDrofo.push("um ovo de dragão" , "coxinha");
+        document.write("Inventário do Torper: " + inventarioTorper + "<br><br> Inventário do Dorfo: " +inventarioDrofo);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
